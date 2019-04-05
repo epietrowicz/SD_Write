@@ -1,3 +1,8 @@
+#include <SPI.h>
+
+#include <SD.h>
+#include <SD_t3.h>
+
 /*
   SD card read/write
  
@@ -17,9 +22,7 @@
  This example code is in the public domain.
    
  */
- 
-#include <SD.h>
-#include <SPI.h>
+
 
 File myFile;
 
@@ -37,8 +40,8 @@ const int chipSelect = 4;
 void setup()
 {
  //UNCOMMENT THESE TWO LINES FOR TEENSY AUDIO BOARD:
- //SPI.setMOSI(7);  // Audio shield has MOSI on pin 7
- //SPI.setSCK(14);  // Audio shield has SCK on pin 14
+  SPI.setMOSI(11);  // Audio shield has MOSI on pin 7
+  SPI.setSCK(13);  // Audio shield has SCK on pin 14
   
  // Open serial communications and wait for port to open:
   Serial.begin(9600);
