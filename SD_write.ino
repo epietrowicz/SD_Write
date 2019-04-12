@@ -35,13 +35,13 @@ File myFile;
 // Wiz820+SD board: pin 4
 // Teensy 2.0: pin 0
 // Teensy++ 2.0: pin 20
-const int chipSelect = 4;
+const int chipSelect = 10;
 
 void setup()
 {
  //UNCOMMENT THESE TWO LINES FOR TEENSY AUDIO BOARD:
-  SPI.setMOSI(11);  // Audio shield has MOSI on pin 7
-  SPI.setSCK(13);  // Audio shield has SCK on pin 14
+//  SPI.setMOSI(11);  // Audio shield has MOSI on pin 7
+//  SPI.setSCK(13);  // Audio shield has SCK on pin 14
   
  // Open serial communications and wait for port to open:
   Serial.begin(9600);
